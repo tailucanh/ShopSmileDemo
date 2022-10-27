@@ -1,0 +1,745 @@
+@import url("https://fonts.googleapis.com/css?family=Metal+Mania");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,200,300,800");
+@import url("https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400, 500,600,700,800,9ee&display=swap");
+
+* {
+  /*Chỉ định chung cả web*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+@font-face {
+  font-family: "Booter - Zero Zero";
+  src: url("Fonts/Booter\ -\ Zero\ Zero.woff") format("woff"),
+    url("Fonts/Booter\ -\ Zero\ Zero.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.header {
+  width: 100%;
+  background: #dcdde1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.nav {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.nav ol {
+  display: flex;
+  list-style: none;
+}
+
+.nav ol li a {
+  text-decoration: none;
+  font-size: 23px;
+  padding: 0.2em 1.2em 0.9em 1.2em;
+  border-radius: 10px 10px 0 0;
+  color: rgb(109, 41, 41);
+  transition: all 0.4s;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.nav ol li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 52px;
+  border-radius: 10px 10px 0 0;
+  background: #853333;
+  transform-origin: bottom;
+  background: linear-gradient(to right, #355c6d, #82ccdd, #355c6d);
+  transform: scaleY(0.05);
+  z-index: -1;
+  transition: all 0.4s;
+}
+.nav ol li a:hover::before {
+  transform: scaleY(1.1);
+}
+.nav ol li a:hover {
+  color: white;
+}
+
+.Btn {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  display: none;
+}
+.Btn::before {
+  content: "\f0c9";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Font Awsome 5 Free";
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.brand1 {
+  text-align: center;
+  margin: 0;
+  font-size: 100px;
+  font-family: "Booter - Zero Zero";
+  font-weight: normal;
+  color: #008080;
+}
+.brand2 {
+  font-size: 200px;
+}
+.brand2:hover {
+  color: rgb(148, 123, 127);
+}
+
+.brand3 {
+  text-align: center;
+  margin: 0;
+  font-size: 100px;
+  font-family: "Booter - Zero Zero";
+  font-weight: normal;
+  color: rgb(10, 5, 5);
+}
+.brand4 {
+  font-size: 90px;
+  margin: 50px; /*Căn lề*/
+}
+.brand4:hover {
+  color: rgb(209, 83, 83);
+}
+
+.conten-section {
+  margin: 20px;
+}
+.section {
+  max-width: 900px; /*Giới hạn chữ chạy */
+  margin: 0 auto; /*Luôn ở giữa*/
+  padding: 0 1.5em; /*Chữ k bị chạy ngược lên*/
+
+}
+
+.about {
+  font-family: "Metal Mania";
+  font-weight: normal;
+  color: #333;
+  text-align: center;
+  font-size: 50px;
+}
+.about:hover {
+  color: rgb(194, 126, 185);
+}
+
+/*-----------  <figure class="snip0025">
+        <img class="img" src="/images/smile.jpg" alt="sample45"/>
+        <div>
+          <h2>You have to use <span>imaginary</span> numbers, like <span>eleventeen</span></h2>   
+          <i class="ion-ios-play-outline"></i>  
+          <div class="curl"></div>
+          <a href="#"></a>
+        </div>        
+      </figure> --------------------*/
+
+figure.snip0025 {
+  font-family: "Raleway", Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 100px;
+  max-width: 350px;
+  max-height: 300px;
+  width: 100%;
+  background: #000000;
+  text-align: left;
+  float: left;
+}
+figure.snip0025 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+figure.snip0025 img {
+  opacity: 1;
+  height: 270px;
+  width: 60px;
+  width: 100%;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+figure.snip0025 > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+figure.snip0025 > div::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  background-image: linear-gradient(
+    45deg,
+    #000000 0%,
+    rgba(0, 0, 0, 0.2) 40%,
+    rgba(0, 0, 0, 0.8)
+  );
+}
+figure.snip0025 h2 {
+  word-spacing: -0.1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  top: 0;
+  opacity: 0;
+  padding: 25px;
+  margin: 0;
+  position: absolute;
+  color: transparent;
+  text-shadow: 0 0 10px #ffffff;
+  text-align: right;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+figure.snip0025 h2 span {
+  font-weight: 800;
+}
+figure.snip0025 i {
+  display: inline-block;
+  font-size: 36px;
+  color: #ffffff;
+  padding: 6px 16px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: 0.05s linear;
+  transition: 0.05s linear;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+figure.snip0025 .curl {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    225deg,
+    #ffffff,
+    #f3f3f3 20%,
+    #bbbbbb 38%,
+    #aaaaaa 44%,
+    #888888 50%,
+    rgba(0, 0, 0, 0.7) 50%,
+    rgba(0, 0, 0, 0.4) 60%,
+    rgba(0, 0, 0, 0.3)
+  );
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease;
+}
+figure.snip0025 .curl:before,
+figure.snip0025 .curl:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 12%;
+  bottom: 6%;
+  width: 70%;
+  max-width: 300px;
+  max-height: 100px;
+  height: 55%;
+  box-shadow: 0 12px 15px rgba(0, 0, 0, 0.3);
+  transform: skew(-10deg) rotate(-6deg);
+}
+figure.snip0025 .curl:after {
+  left: auto;
+  right: 6%;
+  bottom: auto;
+  top: 14%;
+  transform: skew(-15deg) rotate(-84deg);
+}
+figure.snip0025 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  color: #ffffff;
+}
+figure.snip0025:hover > div h2,
+figure.snip0025.hover > div h2 {
+  opacity: 1;
+  text-shadow: 0 0 0px #ffffff;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+figure.snip0025:hover > div::before,
+figure.snip0025.hover > div::before {
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+figure.snip0025:hover i,
+figure.snip0025.hover i {
+  opacity: 0.7;
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+figure.snip0025:hover .curl,
+figure.snip0025.hover .curl {
+  width: 90px;
+  height: 90px;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+/*-------------------------------*/
+:root{
+  --bg: #222;
+}
+
+.footer-main {
+  background: var(--bg);
+  color: rgb(172, 118, 118);
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+}
+.brand3 {
+  text-align: center;
+  margin: 0;
+  font-size: 100px;
+  font-family: "Booter - Zero Zero";
+  font-weight: normal;
+  color: rgb(255, 255, 255);
+}
+.brand4 {
+  font-size: 90px;
+  margin: 50px; /*Căn lề*/
+}
+.brand4:hover {
+  color: rgb(209, 83, 83);
+}
+
+.main-smile {
+  display: flex; /*Thẳngg hàng theo bên trái*/
+  bottom: 0;
+  top: 0;
+ 
+}
+.ul{
+  position: relative;
+  flex-grow: 1;
+  text-align: right;
+  margin-right: 50px;
+  gap: 50px;
+  margin-top: 30px;
+}
+.ul li{
+  position: relative;
+  list-style: none;
+  display: block;
+  float: right;
+  margin: 20px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s
+}
+.ul li:hover{
+  z-index: 10000;
+  transform: scale(0.75s);
+}
+.ul li::before{
+  content: ' ';
+  position: absolute;
+  inset: 30px;
+  box-shadow: 0 0 0 10px var(--clr), 0 0 0 20px var(--bg),
+  0 0 0 22px var(--clr);
+  transition: 0.5s;
+}
+.ul li:hover::before{
+  inset: 0;
+}
+
+.ul li::after{
+  content: ' ';
+  position: absolute;
+  inset: 0;
+  background: var(--bg);
+  transform: rotate(45deg);
+}
+
+.ul li a{
+  position: relative;
+  text-decoration: none;
+  z-index: 10;
+  transition: 0.5s;
+}
+
+.ul li:hover a{
+  font-size: 1.5em;
+  filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--bg)) 
+  drop-shadow(0 0 60px var(--clr));
+}
+
+.fa-youtube {
+  color: red;
+  font-size: 2em;
+ 
+}
+
+
+.fa-facebook-square {
+  color: #1877f2;
+  font-size: 2em;
+
+}
+
+.fa-spotify {
+  color: rgb(29, 126, 88);
+  font-size: 2em;
+}
+
+
+
+.btn {
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.5em;
+  cursor: pointer; /*Đổi biểu tượng con trỏ*/
+}
+.fa-play-circle {
+  color: rgb(214, 209, 210);
+  font-size: 40px;
+}
+
+.btn-header {
+  margin: 0.5em 3% 2em 30%;
+  color: white;
+  border: 0px solid #777;
+  background-color: rgb(225, 225, 225, 0.1);
+  border-radius: 0;
+  font-size: 10px;
+  font-weight: lighter;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+.btn-header:hover {
+  background-color: rgb(225, 225, 225, 0.3);
+}
+
+.btn-play {
+  display: block;
+  margin: 0 auto;
+  font-size: 2.5em;
+  border-radius: 50%;
+  padding: 0;
+  width: 100px;
+}
+
+.tour-row {
+  border-bottom: 1px solid black;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+.tour-row:last-child {
+  border-bottom: none;
+}
+
+.tour-item {
+  display: inline-block;
+  padding-right: 0.5em;
+}
+.tour-date {
+  color: #555;
+  font-weight: bold;
+  width: 30%;
+}
+.tour-ao {
+  width: 24%;
+}
+.tour-size {
+  width: 24%;
+}
+.tour-btn {
+  max-width: 19%;
+}
+.btn-style {
+  color: white;
+  background-color: rgb(78, 142, 216);
+  border: none; /*Không có viền*/
+  border-radius: 9%;
+  font-weight: bold;
+}
+.btn-style:hover {
+  background-color: rgb(142, 174, 201);
+}
+
+.shop-item {
+  margin: 30px;
+}
+.shop-item-name {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: "Luxurious Roman", cursive;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 15px;
+}
+.shop-item-sp {
+  height: 260px;
+  opacity: 1;
+}
+.shop-item-sp:hover {
+  opacity: 0.5;
+}
+
+.shop-item-dat {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+.shop-item-gia {
+  margin-right: 30px;
+  flex-grow: 0.8;
+  color: #333;
+}
+
+.shop-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cart-header {
+  font-weight: bold;
+  font-size: 25px;
+  color: #333;
+}
+.cart-column {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin-right: 1.5em;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.cart-row {
+  display: flex;
+  font-size: 18px;
+}
+
+.cart-item {
+  width: 45%;
+}
+.cart-price {
+  width: 20%;
+  font-size: 1.5em;
+  color: #333;
+}
+.cart-quantity {
+  width: 35%;
+}
+.cart-item-title {
+  font-size: 1.5em;
+  color: rgb(17, 11, 11);
+  margin-left: 0.5em;
+  font-size: 1.2em;
+}
+.cart-item-image {
+  width: 75px;
+  height: auto;
+}
+.btn-dange {
+  color: white;
+  background-color: rgb(201, 78, 78);
+  border: none;
+  border-radius: 0.3em;
+  font-weight: bold;
+}
+.btn-dange:hover {
+  background-color: rgb(151, 190, 197);
+}
+
+.cart-quantity-input {
+  height: 34px;
+  width: 55px;
+  border-radius: 5px;
+  border: 1px solid #dcdde1;
+  background-color: #eee;
+  color: #333;
+  padding: 0;
+  text-align: center;
+  font-size: 1.2em;
+  margin-right: 30px;
+}
+.cart-quantity-button {
+  font-size: 17px;
+}
+.cart-row:last-child {
+  border-bottom: 1px solid black;
+}
+.cart-row:last-child .cart-column {
+  border: none;
+}
+
+.cart-total {
+  text-align: end;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.cart-total-title {
+  font-family: "The Nautigal", cursive;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: black;
+  margin-right: 20px;
+}
+.cart-total-price {
+  color: #333;
+  font-size: 1.1em;
+}
+.btn-total {
+  display: block;
+  margin: 40px auto 50px auto;
+  font-size: 30px;
+  height: 80px;
+  width: 150px;
+}
+
+
+/*----------Header trang mua hàng------------*/
+
+.body-store{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+.header-store{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  min-height: 30vh;
+  background: #1e2759;
+}
+.header-store ul{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+}
+.header-store ul li{
+  list-style: none;
+}
+
+.header-store ul li a{
+  color: #fff;
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  padding: 20px 30px;
+  z-index: 1000;
+  backdrop-filter: blur(15px);
+}
+.header-store ul li a ion-icon{
+  font-size: 2.5em;
+  pointer-events: none;
+  opacity: 0.25;
+  transition: 0.25s;
+}
+.header-store ul li.active a ion-icon{
+  opacity: 1;
+}
+#market{
+  position: absolute ;
+  top: 0;
+  transition: 0.5s;
+  z-index: 1;
+}
+#market::before{
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 40px;
+  border-radius: 8px;
+ 
+}
+.header-store ul li:nth-child(1).active ~ #market::before{
+  background-color: #5da6ff;
+  box-shadow: 0 0 15px #5da6ff,
+              0 0 30px #5da6ff,
+              0 0 45px #5da6ff,
+              0 0 60px #5da6ff;
+}
+
+.header-store ul li:nth-child(2).active ~ #market::before{
+  background-color: #ff0;
+  box-shadow: 0 0 15px #ff0,
+              0 0 30px #ff0,
+              0 0 45px #ff0,
+              0 0 60px #ff0;
+}
+.header-store ul li:nth-child(3).active ~ #market::before{
+  background-color: #0f0;
+  box-shadow: 0 0 15px #0f0,
+              0 0 30px #0f0,
+              0 0 45px #0f0,
+              0 0 60px #0f0;
+}
+.header-store ul li:nth-child(4).active ~ #market::before{
+  background-color: #df2fff;
+  box-shadow: 0 0 15px #df2fff,
+              0 0 30px #df2fff,
+              0 0 45px #df2fff,
+              0 0 60px #df2fff;
+}
+.header-store ul li:nth-child(5).active ~ #market::before{
+  background-color: #ff308f;
+  box-shadow: 0 0 15px #ff308f,
+              0 0 30px #ff308f,
+              0 0 45px #ff308f,
+              0 0 60px #ff308f;
+}
+
+
+
+

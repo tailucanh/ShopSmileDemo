@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Trang chủ</title>
+    <script
+      src="https://kit.fontawesome.com/136fe39f73.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo"><img src="./images/logo-removebg .png"></a>
+      <ul class="navigation">
+        <li><a href="trang-chu.html">Trang chủ</a></li>
+        <li><a href="store.html">Cửa hàng</a></li>
+        <li><a href="history.html">Lịch sử</a></li>
+        <li><a href="lienHe.html">Liên hệ</a></li>
+      </ul>
+      <div class="search">
+        <input type="text" placeholder="Search">    
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </div>
+    </header>
+    
+    
+    <div class="banner">
+      <img src="./images/background2 .png" class="bg">
+      <div class="content">
+        <img src="./images/chusmile-removebg.png" class="movieTitle">
+        <h4>
+          <span>2021</span>
+          <span><i>12+</i></span>
+          <span>1h 55min</span>
+          <span>Action</span>
+        </h4>
+     
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis repellat hic nam libero possimus fuga voluptatum nisi enim nostrum eum beatae facere voluptatibus temporibus at, corrupti quaerat porro mollitia magnam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nam porro error labore, doloremque itaque. Odio officia earum, explicabo ut architecto vitae voluptas asperiores deleniti doloremque nulla inventore dignissimos nam.</p>
+        <div class="button">
+          <a href="#"><i class="fa fa-play" aria-hidden="true"></i> Play</a>
+          <a href="#"><i class="fa fa-plus" aria-hidden="true"></i> My List</a>
+        </div>
+      </div>
+      <a href="#" class="play" onclick="toggleVideo();"><img src="./images/play.png" >Watch Trailer</a>
+    </div>
+
+    <div class="trailer">
+      <video src="./images/Vietnam - Land of ancient secrets - Cinematic Travel.mp4" controls="true"></video>
+      <img src="./images/close.png" class="close" onclick="toggleVideo();">
+    </div>
+  
+    
+    <footer class="footer-main">
+      <div class="main-smile">
+        <h3 class="brand3 brand4">The Smile</h3>
+        <ul class="ul">
+         
+         <li style="--clr:#25d366;">
+            <a href="https://www.spotify.com/vn-vi/" target="_blank">
+              <i class="fab fa-spotify"></i>
+            </a>
+          </li>
+
+          <li style="--clr:#ff0000;">
+            <a href="https://www.youtube.com/" target="_blank">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+
+           <li style="--clr:#1877f2;">
+             <a href="https://www.facebook.com/lucanh.tai" target="_blank">
+              <i class="fab fa-facebook-square"></i>
+            </a>
+          </li>  
+
+        </ul>
+      </div>
+    </footer>
+
+    <script>
+      function toggleVideo(){
+        const trailer = document.querySelector('.trailer');
+        const video = document.querySelector('video');
+        trailer.classList.toggle('active');
+        video.currentTime = 0;
+        video.pause();
+      }
+    </script>
+
+  </body>
+</html>
